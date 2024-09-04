@@ -69,8 +69,18 @@ public class ChemicalElement {
 		return name;
 	}
 
+	@Override
+	public String toString() {
+		return "ChemicalElement [atomicNumber=" + atomicNumber + ", symbol=" + symbol + ", name=" + name + "]";
+	}
+
 //	public void setName(String name) {
 //		this.name = name;
+//	}
+	
+//	@Override
+//	public String toString() {
+//		return "He he he :)";
 //	}
 	
 	
