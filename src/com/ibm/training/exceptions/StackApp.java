@@ -12,6 +12,8 @@ public class StackApp {
 		FixedArrayStack fas = new FixedArrayStack(9);
 		
 		//DynStack ds = new DynStack();
+		
+		
 		u.fill(fas);
 
 	}
