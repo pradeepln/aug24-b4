@@ -19,6 +19,8 @@ public class WrapperDemo {
 		
 		i++;
 		intObj++; //avoid. math is more efficient on primitives
+		
+		int k = intObj;
 
 	}
 
