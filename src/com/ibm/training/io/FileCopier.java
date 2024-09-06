@@ -1,5 +1,7 @@
 package com.ibm.training.io;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -18,14 +20,16 @@ public class FileCopier {
 		try {
 			FileInputStream fin = new FileInputStream(src);
 			FileOutputStream fout = new FileOutputStream(dest);
+			BufferedInputStream bin = new BufferedInputStream(fin);
+			BufferedOutputStream bout = new BufferedOutputStream(fout);
 			
 			int aByte = -1;
-			while((aByte = fin.read()) != -1) {
-				fout.write(aByte);
+			while((aByte = bin.read()) != -1) {
+				bout.write(aByte);
 			}
 			
-			fin.close();
-			fout.close();
+			bin.close();
+			bout.close();
 			
 			long stopTime = System.currentTimeMillis();
 			
