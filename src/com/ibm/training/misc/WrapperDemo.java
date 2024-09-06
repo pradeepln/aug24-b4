@@ -22,6 +22,7 @@ public class WrapperDemo {
 		
 		int k = intObj;
 
+		Object o = 10;
 	}
 
 }
