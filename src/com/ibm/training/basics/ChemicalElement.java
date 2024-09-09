@@ -74,6 +74,28 @@ public class ChemicalElement {
 		return "ChemicalElement [atomicNumber=" + atomicNumber + ", symbol=" + symbol + ", name=" + name + "]";
 	}
 
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + atomicNumber;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		ChemicalElement other = (ChemicalElement) obj;
+		if (atomicNumber != other.atomicNumber)
+			return false;
+		return true;
+	}
+
 //	public void setName(String name) {
 //		this.name = name;
 //	}
