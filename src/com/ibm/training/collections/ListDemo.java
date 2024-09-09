@@ -1,7 +1,9 @@
 package com.ibm.training.collections;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.List;
 
 public class ListDemo {
 
@@ -11,7 +13,7 @@ public class ListDemo {
 		linkedListOps();
 	}
 
-	public static void someAlgo(ArrayList<String> l) {
+	public static void someAlgo(List<String> l) {
 		//assume u have a million elements in l
 
 		l.add(0, "he he he"); // linear time op O(n) in arrayList
@@ -22,6 +24,23 @@ public class ListDemo {
 		String s = l.get(n); // O(1) in AL, O(n) in LL
 		
 		l.remove(0);
+		System.out.println("--------------------Loop in someAlgo");
+//		for(int i = 0; i < l.size(); i++) {
+//			String aValue = l.get(i);
+//			//do something with aValue
+//			System.out.println(aValue);
+//		}
+		
+//		Iterator<String> it = l.iterator();
+//		while(it.hasNext()) {
+//			String aValue = it.next();
+//			System.out.println(aValue);
+//		}
+		
+		for(String aValue : l) {
+			System.out.println(aValue);
+		}
+		
 	}
 
 	private static void linkedListOps() {
@@ -50,6 +69,8 @@ public class ListDemo {
 			String aValue = ll.get(i); // bad
 			System.out.println(aValue);
 		}
+		
+		someAlgo(ll);
 	}
 
 	private static void simpleGenericOps() {
