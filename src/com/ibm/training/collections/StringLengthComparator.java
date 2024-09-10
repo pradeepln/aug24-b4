@@ -12,6 +12,7 @@ public class StringLengthComparator implements Comparator<String> {
 //			return -1;
 //		}
 //		return 0;
+		//System.out.println("in SLC, comparing "+s1+" to "+s2);
 		
 		return s1.length() - s2.length();
 	}

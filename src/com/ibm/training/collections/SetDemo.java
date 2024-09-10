@@ -1,16 +1,17 @@
 package com.ibm.training.collections;
 
-import java.util.HashSet;
-import java.util.LinkedHashSet;
 import java.util.Scanner;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class SetDemo {
 
 	public static void main(String[] args) {
 		
 //		Set<String> uniqueWords = new HashSet<>(); //iteration order is not same as insertion order
-		Set<String> uniqueWords = new LinkedHashSet<>(); //iteration order is same as insertion order
+//		Set<String> uniqueWords = new LinkedHashSet<>(); //iteration order is same as insertion order
+		Set<String> uniqueWords = new TreeSet<>(); //elements are held in asc order
+		
 		Scanner kb = new Scanner(System.in);
 		
 		while(true) {
