@@ -3,6 +3,7 @@ package com.ibm.training.collections;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import com.ibm.training.basics.Employee;
@@ -14,10 +15,24 @@ public class SortDemo {
 		//sortStringArrayNatural();
 		//sortStringListNatural();
 		//sortListOfUserDefinedType();
-		
-		sortStringArrayBasedOnLength();
+		//sortStringArrayBasedOnLength();
+		sortStringArrayBasedOnLengthUsingAnon();
 	}
 
+	private static void sortStringArrayBasedOnLengthUsingAnon() {
+		String[] words = new String[]{"this","is","a","list","of","beautiful","words","like","zebra","and","gorilla"};
+		System.out.println("before sort using anon\n" + Arrays.toString(words));
+		
+		Arrays.sort(words, new Comparator<String>() {
+			@Override
+			public int compare(String s1, String s2) {
+				return s1.length() - s2.length();
+			}
+		} );
+		
+		System.out.println("after sort\n" + Arrays.toString(words));
+		
+	}
 	private static void sortStringArrayBasedOnLength() {
 		String[] words = new String[]{"this","is","a","list","of","beautiful","words","like","zebra","and","gorilla"};
 		System.out.println("before sort\n" + Arrays.toString(words));
