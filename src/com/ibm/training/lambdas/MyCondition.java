@@ -1,8 +1,8 @@
 package com.ibm.training.lambdas;
 
 @FunctionalInterface
-public interface MyCondition {
+public interface MyCondition<T> {
 	
-	public boolean test(String s);
+	public boolean test(T s);
 	
 }
