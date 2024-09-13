@@ -9,7 +9,7 @@ public class StackApp {
 		
 		StackUser u = new StackUser();
 		
-		//FixedArrayStack fas = new FixedArrayStack(10);
+		FixedArrayStack fas = new FixedArrayStack(10);
 		
 		DynStack ds = new DynStack();
 		u.fill(ds);

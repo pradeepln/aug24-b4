@@ -38,6 +38,10 @@ public class BirthdayGreeter {
 		
 		Period p = Period.between(birthday, today);
 		System.out.println("You are "+p.getYears()+" years, "+p.getMonths()+" months and "+p.getDays()+" days old!");
+		
+		System.out.println("today's date : "+today);
+		
+		System.out.println("Today's date : "+today.format(DateTimeFormatter.ofPattern("E dd/MM/yyyy")));
 	}
 
 }
